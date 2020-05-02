@@ -1,0 +1,15 @@
+<div class="contact">
+    <form [formGroup]="form">
+        <div class="detail">
+            <img src="assets/icons/send.svg">
+        </div>
+        <h3>Contact Me</h3>
+        <input type="text" placeholder="Name" formControlName="name">
+        <input type="email" placeholder="Email" formControlName="_replyto">
+        <textarea placeholder="Message" formControlName="message"></textarea>
+        <button (click)="send()">SEND MESSAGE</button>
+    </form>
+    <div class="social-media">
+        
+    </div>
+</div>
