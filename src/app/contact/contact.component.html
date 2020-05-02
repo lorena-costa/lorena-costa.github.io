@@ -3,11 +3,22 @@
         <div class="detail">
             <img src="assets/icons/send.svg">
         </div>
-        <h3>Contact Me</h3>
-        <input type="text" placeholder="Name" formControlName="name">
-        <input type="email" placeholder="Email" formControlName="_replyto">
-        <textarea placeholder="Message" formControlName="message"></textarea>
-        <button (click)="send()">SEND MESSAGE</button>
+        <div class="form">
+            <h3>Contact Me</h3>
+            <div class="form-input">
+                <span>Name:</span>
+                <input type="text" formControlName="name">
+            </div>
+            <div class="form-input">
+                <span>Email:</span>
+                <input type="email" formControlName="_replyto">
+            </div>
+            <div class="form-input">
+                <span>Message:</span>
+                <textarea formControlName="message"></textarea>
+            </div>
+            <button (click)="send()">SEND MESSAGE</button>
+        </div>
     </form>
     <div class="social-media">
         

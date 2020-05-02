@@ -23,9 +23,13 @@ export class ContactComponent implements OnInit {
   }
   // TODO: Verificar maneira de impedir melhor spam
   send() {
-    let url = 'https://formspree.io/lorenacosta.ufu@gmail.com'
-    this.http.post(url, this.form.value).subscribe(() => {
-      // TODO: Alertar que mensagem foi enviada com sucesso
-    })
+    if(this.form.valid) {
+      let url = 'https://formspree.io/lorenacosta.ufu@gmail.com'
+      this.http.post(url, this.form.value).subscribe(() => {
+        // TODO: Alertar que mensagem foi enviada com sucesso
+      })
+    } else {
+      this.form.markAllAsTouched()
+    }
   }
 }
