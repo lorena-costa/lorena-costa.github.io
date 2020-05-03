@@ -14,6 +14,7 @@ form {
     justify-content: space-around;
     h3 {
         margin-top: 0;
+        margin-bottom: 6px;
     }
 }
 
@@ -21,19 +22,18 @@ form {
     position: relative;
     background: rgb(42,120,36);
     background: linear-gradient(145deg, rgba(42,120,36,1) 0%, rgba(50,177,40,1) 100%);
-    height: 50px;
-    width: 50px;
+    min-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
     border-radius: 5px;
     top: -45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.3);
     img {
         height: 28px;
-        margin-left: -2px;
+        position: relative;
+        left: -1px;
     }
 }
 
@@ -52,10 +52,57 @@ input, textarea {
     height: 100vh;
 }
 
-.social-media {
+.image {
     background-color: rgb(114, 104, 104);
     height: 100px;
     min-width: 50px;
+    display: flex;
+    align-items: flex-end;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    span {
+        font-family: 'Roboto';
+        color: white;
+        margin: 50px;
+        font-size: 1.8rem;
+    }
+}
+
+// TODO: organizar variáveis
+$bg-color: #f0f0f0;
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    height: 70px;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--bg);
+        align-items: center;
+        justify-content: center;
+        height: 46px;
+        width: 46px;
+        border-radius: 23px;
+        margin: 0 8px;
+        cursor: pointer;
+    }
+    div:hover {
+        background-color: darken($bg-color, 5%)
+    }
+    .email {
+        height: 22px;
+        margin-top: 2px;
+    }
+    .in {
+        height: 20px;
+        margin-top: -2px;
+    }
+    .wpp {
+        height: 24px;
+    }
 }
 
 // Desktop
@@ -66,19 +113,16 @@ input, textarea {
         align-items: center;
         justify-content: center;
     }
-    .social-media {
+    .image {
         order: 1;
         width: calc(100% - #{$form-width} - 340px);
-        height: calc(100% - 160px);
+        height: calc(100% - 120px);
     }
     form {
         order: 2;
         width: $form-width;
         max-width: $form-width;
-        height: calc(100% - 200px);
-        -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
-        -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
-        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+        height: calc(100% - 160px);
         border-bottom-right-radius: 3px;
         border-top-right-radius: 3px;
     }

@@ -1,26 +1,37 @@
 <div class="contact">
-    <form [formGroup]="form">
-        <div class="detail">
+    <form [formGroup]="form" class="shadow">
+        <div class="detail shadow">
             <img src="assets/icons/send.svg">
         </div>
         <div class="form">
             <h3>Contact Me</h3>
             <div class="form-input">
-                <span>Name:</span>
+                <span [ngClass]="{invalid: invalidName}">Name:</span>
                 <input type="text" formControlName="name">
             </div>
             <div class="form-input">
-                <span>Email:</span>
+                <span [ngClass]="{invalid: invalidEmail}">Email:</span>
                 <input type="email" formControlName="_replyto">
             </div>
             <div class="form-input">
-                <span>Message:</span>
+                <span [ngClass]="{invalid: invalidMessage}">Message:</span>
                 <textarea formControlName="message"></textarea>
             </div>
             <button (click)="send()">SEND MESSAGE</button>
         </div>
+        <div class="social-media">
+            <div class="shadow" (click)="email()">
+                <img class="email" src="assets/icons/email.svg">
+            </div>
+            <div class="shadow" (click)="linkedin()">
+                <img class="in" src="assets/icons/linkedin.svg">
+            </div>
+            <div class="shadow" (click)="wpp()">
+                <img class="wpp" src="assets/icons/whatsapp.svg">
+            </div>
+        </div>
     </form>
-    <div class="social-media">
-        
+    <div class="image">
+        <span>Keep in touch...</span>
     </div>
 </div>

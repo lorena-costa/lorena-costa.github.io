@@ -34,6 +34,7 @@ h3 {
     color: var(--dark-gray);
     font-size: 1.66rem;
     font-family: 'RobotoLight';
+    margin-bottom: 0;
 }
 
 .full-height {
@@ -42,7 +43,7 @@ h3 {
 
 input, textarea {
     background-color: white;
-    padding: 12px 2px;
+    padding: 10px 2px;
     border: 1px solid var(--light-gray);
     border-radius: 3px;
     color: var(--darker-gray);
@@ -60,7 +61,7 @@ textarea {
 
 button {
     background-color: var(--main);
-    padding: 12px;
+    padding: 10px;
     border: 0;
     border-radius: 3px;
     color: white;
@@ -76,10 +77,17 @@ button:hover {
     display: flex;
     flex-direction: column;
     span {
-        font-size: 1.16rem;
+        font-family: 'Roboto';
+        font-size: 1rem;
         color: var(--darker-gray);
     }
-    span.ng-invalid {
+    span.invalid {
         color: var(--error)
     }
+}
+
+.shadow {
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
 }

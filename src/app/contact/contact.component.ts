@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-contact',
@@ -31,5 +32,41 @@ export class ContactComponent implements OnInit {
     } else {
       this.form.markAllAsTouched()
     }
+  }
+
+  email(){
+    this.copyMessage('lorenacosta.ufu@gmail.com')
+  }
+
+  linkedin(){
+    window.open("https://www.linkedin.com/in/lorena-fernandes-costa-611202157", "_blank");
+  }
+
+  wpp(){
+    this.copyMessage('+5534991529928')
+  }
+
+  copyMessage(val: string){
+    const auxBox = document.createElement('textarea');
+    auxBox.style.position = 'fixed';
+    auxBox.style.left = '0';
+    auxBox.style.top = '0';
+    auxBox.style.opacity = '0';
+    auxBox.value = val;
+    document.body.appendChild(auxBox);
+    auxBox.focus();
+    auxBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(auxBox);
+  }
+
+  get invalidEmail() {
+    return this.form.controls['_replyto'].invalid && this.form.controls['_replyto'].touched
+  }
+  get invalidName() {
+    return this.form.controls['name'].invalid && this.form.controls['name'].touched
+  }
+  get invalidMessage() {
+    return this.form.controls['message'].invalid && this.form.controls['message'].touched
   }
 }
