@@ -4,5 +4,7 @@
     "Keep in touch": "",
     "SEND MESSAGE": "ENVIAR MENSAGEM",
     "Name": "Nome",
-    "Message": "Mensagem"
+    "Message": "Mensagem",
+    "Message sent!": "Mensagem enviada!",
+    "Error: message not sent": "Erro: mensagem não enviada"
 }

@@ -8,6 +8,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NotifierModule } from "angular-notifier";
+import { customNotifierOptions } from "./notifier-options";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -25,6 +27,7 @@ export function createTranslateLoader(http: HttpClient) {
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NotifierModule.withConfig(customNotifierOptions),
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

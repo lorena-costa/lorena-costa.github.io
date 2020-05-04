@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ThrowStmt } from '@angular/compiler';
+import { NotifierService } from 'angular-notifier';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
@@ -12,7 +13,12 @@ export class ContactComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private http: HttpClient, private formBuilder: FormBuilder) { }
+  constructor(
+    private http: HttpClient, 
+    private formBuilder: FormBuilder,
+    private notifier: NotifierService,
+    private translate: TranslateService
+  ) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -27,8 +33,14 @@ export class ContactComponent implements OnInit {
     if(this.form.valid) {
       let url = 'https://formspree.io/lorenacosta.ufu@gmail.com'
       this.http.post(url, this.form.value).subscribe(() => {
-        // TODO: Alertar que mensagem foi enviada com sucesso
+        this.translate.get('Message sent!').subscribe((text) =>{
+          this.notifier.notify("success",text)
+        });
         this.resetForm()
+      },()=>{
+        this.translate.get('Error: message not sent').subscribe((text) =>{
+          this.notifier.notify("error",text)
+        });
       })
     } else {
       this.form.markAllAsTouched()

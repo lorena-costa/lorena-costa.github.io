@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'variables.scss';
+@import "~angular-notifier/styles";
 
 @font-face {
     font-family: 'Roboto';
@@ -20,6 +21,7 @@ body, html {
     padding: 0;
     margin: 0;
     font-size: 14px;
+    height: 100%;
 }
 
 h3 {
