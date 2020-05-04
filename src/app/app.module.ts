@@ -10,6 +10,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NotifierModule } from "angular-notifier";
 import { customNotifierOptions } from "./notifier-options";
+import { ProfileComponent } from './profile/profile.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -19,7 +20,8 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
     AppComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
