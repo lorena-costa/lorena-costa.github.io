@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables.scss';
 
 @font-face {
     font-family: 'Roboto';
@@ -15,15 +16,6 @@
     src: url(assets/fonts/Roboto-Bold.ttf);
 }
 
-:root {
-    --light-gray: rgb(182, 181, 181); 
-    --dark-gray : #646464;
-    --darker-gray: #464545;
-    --main: #2a7824;
-    --bg: #f0f0f0;
-    --error: #dd3535;
-}
-
 body, html {
     padding: 0;
     margin: 0;
@@ -31,7 +23,7 @@ body, html {
 }
 
 h3 {
-    color: var(--dark-gray);
+    color: $dark-gray;
     font-size: 1.8rem;
     font-family: 'RobotoLight';
     margin-bottom: 0;
@@ -44,15 +36,15 @@ h3 {
 input, textarea {
     background-color: white;
     padding: 10px 2px;
-    border: 1px solid var(--light-gray);
+    border: 1px solid $light-gray;
     border-radius: 3px;
-    color: var(--darker-gray);
+    color: $darker-gray;
     font-size: 1rem;
     font-family: 'Roboto';
 }
 input.ng-touched.ng-invalid, textarea.ng-touched.ng-invalid {
-    border: 1px solid var(--error);  
-    color: var(--error);
+    border: 1px solid $error;  
+    color: $error;
 }
 
 textarea {
@@ -60,7 +52,7 @@ textarea {
 }
 
 button {
-    background-color: var(--main);
+    background-color: $main;
     padding: 10px;
     border: 0;
     border-radius: 3px;
@@ -71,7 +63,7 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: darken(#2a7824,3%);
+    background-color: darken($main,3%);
 }
 .form-input {
     display: flex;
@@ -79,10 +71,10 @@ button:hover {
     span {
         font-family: 'Roboto';
         font-size: 1rem;
-        color: var(--darker-gray);
+        color: $darker-gray;
     }
     span.invalid {
-        color: var(--error)
+        color: $error;
     }
 }
 

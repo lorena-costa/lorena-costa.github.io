@@ -1,3 +1,5 @@
+@import 'src/variables.scss';
+
 form {
     display: flex;
     flex-direction: column;
@@ -20,8 +22,8 @@ form {
 
 .detail {
     position: relative;
-    background: rgb(42,120,36);
-    background: linear-gradient(145deg, rgba(42,120,36,1) 0%, rgba(50,177,40,1) 100%);
+    background: $main;
+    background: linear-gradient(145deg, $main 0%, #32b128 100%);
     min-height: 50px;
     min-width: 50px;
     max-width: 50px;
@@ -30,6 +32,7 @@ form {
     display: flex;
     align-items: center;
     justify-content: center;
+
     img {
         height: 28px;
         position: relative;
@@ -41,14 +44,10 @@ textarea {
     height: 80px;
 }
 
-input, textarea {
-    margin-bottom: 14px;
-}
-
 .contact {
     display: flex;
     flex-direction: column;
-    background-color: var(--bg);
+    background-color: $bg;
     height: 100vh;
 }
 
@@ -68,8 +67,6 @@ input, textarea {
     }
 }
 
-// TODO: organizar variáveis
-$bg-color: #f0f0f0;
 .social-media {
     display: flex;
     flex-direction: row;
@@ -90,7 +87,7 @@ $bg-color: #f0f0f0;
         cursor: pointer;
     }
     div:hover {
-        background-color: darken($bg-color, 5%)
+        background-color: darken($bg, 5%)
     }
     .email {
         height: 22px;
