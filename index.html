@@ -5,8 +5,15 @@
   <title>Lorena Costa | Desenvolvedora</title>
   <base href="https://lorena-costa.github.io/">  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.4e04a97b76ab97f0a506.css"></head>
+  <!-- Android Viewport height fix-->
+  <script type="text/javascript">
+    var isAndroid = navigator.userAgent.toLowerCase().indexOf("android") > -1; //&& ua.indexOf("mobile");
+    if(isAndroid) {
+        document.write('<meta name="viewport" content="width=device-width,height='+window.innerHeight+', initial-scale=1.0">');
+    }
+  </script> 
+<link rel="stylesheet" href="styles.72cfba82e9db22ac3dae.css"></head>
 <body>
   <app-root></app-root>
-<script src="runtime-es2015.0811dcefd377500b5b1a.js" type="module"></script><script src="runtime-es5.0811dcefd377500b5b1a.js" nomodule defer></script><script src="polyfills-es5.7dc30b9b67437efb1d9b.js" nomodule defer></script><script src="polyfills-es2015.5c2fca18c0ecc127d525.js" type="module"></script><script src="main-es2015.1daae6c42b8828fdb53c.js" type="module"></script><script src="main-es5.1daae6c42b8828fdb53c.js" nomodule defer></script></body>
+<script src="runtime-es2015.0811dcefd377500b5b1a.js" type="module"></script><script src="runtime-es5.0811dcefd377500b5b1a.js" nomodule defer></script><script src="polyfills-es5.7dc30b9b67437efb1d9b.js" nomodule defer></script><script src="polyfills-es2015.5c2fca18c0ecc127d525.js" type="module"></script><script src="main-es2015.63a7852141b33c355ecf.js" type="module"></script><script src="main-es5.63a7852141b33c355ecf.js" nomodule defer></script></body>
 </html>
