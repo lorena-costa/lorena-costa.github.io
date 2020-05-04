@@ -49,6 +49,9 @@ export class ContactComponent implements OnInit {
 
   email(){
     this.copyMessage('lorenacosta.ufu@gmail.com')
+    this.translate.get('Email copied!').subscribe((text) =>{
+      this.notifier.notify("success",text)
+    });
   }
 
   linkedin(){
@@ -57,6 +60,9 @@ export class ContactComponent implements OnInit {
 
   wpp(){
     this.copyMessage('+5534991529928')
+    this.translate.get('Whatsapp Number copied!').subscribe((text) =>{
+      this.notifier.notify("success",text)
+    });
   }
 
   copyMessage(val: string){

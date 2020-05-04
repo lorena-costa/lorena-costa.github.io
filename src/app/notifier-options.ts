@@ -4,7 +4,7 @@ export const customNotifierOptions: NotifierOptions = {
     position: {
           horizontal: {
               position: 'right',
-              distance: 12
+              distance: 20
           },
           vertical: {
               position: 'bottom',
