@@ -1,15 +1,15 @@
 <div class="contact">
     <div class="image">
-        <span>Keep in touch...</span>
+        <span>{{'Keep in touch' | translate}}</span>
     </div>
     <form [formGroup]="form" class="shadow">
         <div class="detail shadow">
             <img src="assets/icons/send.svg">
         </div>
         <div class="form">
-            <h3>Contact Me</h3>
+            <h3>{{'Contact Me' | translate}}</h3>
             <div class="form-input">
-                <span [ngClass]="{invalid: invalidName}">Name:</span>
+                <span [ngClass]="{invalid: invalidName}">{{'Name' | translate}}:</span>
                 <input type="text" formControlName="name">
             </div>
             <div class="form-input">
@@ -17,10 +17,10 @@
                 <input type="email" formControlName="_replyto">
             </div>
             <div class="form-input">
-                <span [ngClass]="{invalid: invalidMessage}">Message:</span>
+                <span [ngClass]="{invalid: invalidMessage}">{{'Message' | translate}}:</span>
                 <textarea formControlName="message"></textarea>
             </div>
-            <button (click)="send()">SEND MESSAGE</button>
+            <button (click)="send()">{{'SEND MESSAGE' | translate}}</button>
         </div>
         <div class="social-media">
             <div class="shadow" (click)="email()">

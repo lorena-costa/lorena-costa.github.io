@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,11 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent{
 
-  constructor(private titleService: Title){
-    // TODO: traduzir titulo
-    this.titleService.setTitle('Lorena Costa | Developer')
+  constructor(private titleService: Title,translate: TranslateService){
+    translate.setDefaultLang('en');
+    translate.use('pt'); 
+    translate.get('TITLE').subscribe((title) => {
+      this.titleService.setTitle(title)
+    });
   }
 }

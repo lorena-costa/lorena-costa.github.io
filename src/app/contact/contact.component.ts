@@ -28,6 +28,7 @@ export class ContactComponent implements OnInit {
       let url = 'https://formspree.io/lorenacosta.ufu@gmail.com'
       this.http.post(url, this.form.value).subscribe(() => {
         // TODO: Alertar que mensagem foi enviada com sucesso
+        this.resetForm()
       })
     } else {
       this.form.markAllAsTouched()
@@ -59,6 +60,13 @@ export class ContactComponent implements OnInit {
     document.execCommand('copy');
     document.body.removeChild(auxBox);
   }
+
+  resetForm() {
+    this.form.reset();
+    Object.keys(this.form.controls).forEach(key => {
+      this.form.get(key).setErrors(null) ;
+    });
+}
 
   get invalidEmail() {
     return this.form.controls['_replyto'].invalid && this.form.controls['_replyto'].touched

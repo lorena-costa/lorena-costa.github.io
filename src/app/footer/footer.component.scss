@@ -1,0 +1,19 @@
+@import "src/variables.scss";
+
+.footer {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 26px;
+    img {
+        height: 22px;
+        margin-left: 12px;
+    }
+    span {
+        line-height: 22px;
+        font-family: 'Roboto';
+        color: $darker-gray;
+    }
+}
