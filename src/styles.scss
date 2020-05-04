@@ -24,6 +24,13 @@ body, html {
     height: 100%;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 h3 {
     color: $dark-gray;
     font-size: 1.8rem;
