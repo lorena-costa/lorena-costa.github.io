@@ -1,11 +1,22 @@
 @import 'src/variables.scss';
 
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg;
+    height: 100vh;
+}
+
 form {
     display: flex;
     flex-direction: column;
     padding: 20px;
     background-color: white;
-    width: 80%;
+    width: calc(100% - 80px);
+    height: calc(100% - 160px);
+    border-radius: 3px;
 }
 
 .form {
@@ -44,27 +55,8 @@ textarea {
     height: 80px;
 }
 
-.contact {
-    display: flex;
-    flex-direction: column;
-    background-color: $bg;
-    height: 100vh;
-}
-
 .image {
-    background-color: rgb(114, 104, 104);
-    height: 100px;
-    min-width: 50px;
-    display: flex;
-    align-items: flex-end;
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
-    span {
-        font-family: 'Roboto';
-        color: white;
-        margin: 50px;
-        font-size: 1.8rem;
-    }
+    display: none;   
 }
 
 .social-media {
@@ -87,7 +79,7 @@ textarea {
         cursor: pointer;
     }
     div:hover {
-        background-color: darken($bg, 5%)
+        background-color: darken(#ebe9e9, 5%)
     }
     .email {
         height: 22px;
@@ -103,24 +95,43 @@ textarea {
 }
 
 // Desktop
-@media screen and (min-width: 600px) {
-    $form-width: 360px;
-    .contact {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
+$form-width: 360px;
+@media screen and (min-width: 700px) {
     .image {
-        order: 1;
-        width: calc(100% - #{$form-width} - 340px);
+        display: block;
+        width: calc(100% - #{$form-width} - 60px);
         height: calc(100% - 120px);
+        background-color: rgb(114, 104, 104);
+        display: flex;
+        align-items: flex-end;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        span {
+            font-family: 'Roboto';
+            color: white;
+            margin: 50px;
+            font-size: 1.8rem;
+        }
     }
     form {
-        order: 2;
         width: $form-width;
         max-width: $form-width;
-        height: calc(100% - 160px);
-        border-bottom-right-radius: 3px;
-        border-top-right-radius: 3px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .image {
+        width: calc(100% - #{$form-width} - 340px);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    form {
+        height: calc(100% - 120px);
+    }
+    .image {
+        height: calc(100% - 80px);   
     }
 }
