@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotifierService } from 'angular-notifier';
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -31,7 +32,7 @@ export class ContactComponent implements OnInit {
   // TODO: Verificar maneira de impedir melhor spam
   send() {
     if(this.form.valid) {
-      let url = 'https://formspree.io/lorenacosta.ufu@gmail.com'
+      let url = environment.url
       this.http.post(url, this.form.value).subscribe(() => {
         this.translate.get('Message sent!').subscribe((text) =>{
           this.notifier.notify("success",text)
