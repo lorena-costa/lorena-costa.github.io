@@ -1,0 +1,69 @@
+@import "src/variables.scss";
+
+.menu {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+    background-color: $bg;
+    height: 44px;
+    width: 44px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+        cursor: pointer;
+    }
+    .actions {
+        display: none;
+    }
+}
+
+.menu.isOpen {
+    height: 180px;
+    width: 120px;
+    align-items: flex-start;
+    .actions {
+        width: 100%;
+        display: block;
+        p {
+            font-family: 'RobotoLight';
+            margin: 0;
+            padding: 4px 0 4px 8px;
+            font-size: 1.2rem;
+            width: calc(100% - 8px);
+            cursor: pointer;
+        }
+        p:hover {
+            background-color: darken($bg,3%);
+        }
+        p:last-of-type {
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+        .line {
+            width: 80px;
+            height: 1px;
+            border-top: 1px solid #d1d0d0;
+            margin-left: 8px;
+        }
+    }    
+}
+.menu:hover {
+    background-color: darken($bg, 3%);
+}
+.menu.isOpen:hover {
+    background-color: $bg;
+}
+
+.closed {
+    height: 26px;
+    padding: 18px;
+}
+
+.opened {
+    height: 18px;
+    align-self: flex-end;
+    margin-right: 16px;
+}

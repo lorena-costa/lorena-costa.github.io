@@ -1,0 +1,12 @@
+<div class="menu shadow" [ngClass]="{'isOpen': isOpen}">
+    <img class='closed' src="assets/icons/menu.svg" (click)="isOpen = true" *ngIf="!isOpen">
+    <img class='opened' src="assets/icons/close.svg" (click)="isOpen = false" *ngIf="isOpen">
+    <div class="actions">
+        <p>{{'Home' | translate}}</p>
+        <p>{{'About Me' | translate}}</p>
+        <p>{{'Skills' | translate}}</p>
+        <p>{{'Contact Me' | translate}}</p>
+        <div class="line"></div>
+        <p>English</p>
+    </div>
+</div>
