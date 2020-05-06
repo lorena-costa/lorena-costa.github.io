@@ -1,6 +1,6 @@
-<div class="menu shadow" [ngClass]="{'isOpen': isOpen}">
-    <img class='closed' src="assets/icons/menu.svg" (click)="isOpen = true" *ngIf="!isOpen">
-    <img class='opened' src="assets/icons/close.svg" (click)="isOpen = false" *ngIf="isOpen">
+<div id="menu" class="menu shadow">
+    <img class='closed' src="assets/icons/menu.svg" (click)="open()" *ngIf="!isOpen">
+    <img class='opened' src="assets/icons/close.svg" (click)="close()" *ngIf="isOpen">
     <div class="actions">
         <p (click)="scrollTo('home')">{{'Home' | translate}}</p>
         <p (click)="scrollTo('about')">{{'About Me' | translate}}</p>

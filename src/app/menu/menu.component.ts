@@ -21,11 +21,27 @@ export class MenuComponent implements OnInit {
     this.currentLanguage = this.languages[this.translate.currentLang]
   }
 
+  open(){
+    this.isOpen = true;
+    document.getElementById('menu').classList.remove('close-animation')
+    document.getElementById('menu').classList.add('open-animation')
+    setTimeout(() => {
+      document.getElementById('menu').classList.add('isOpen')
+    }, 500)
+  }
+
+  close() {
+    this.isOpen = false;
+    document.getElementById('menu').classList.remove('isOpen')
+    document.getElementById('menu').classList.remove('open-animation')
+    document.getElementById('menu').classList.add('close-animation')
+  }
+
   scrollTo(idSection: string) {
     let el = document.getElementById(idSection)
     if(el) {
       el.scrollIntoView({behavior:"smooth"})
-      this.isOpen = false
+      this.close()
     }
   }
 

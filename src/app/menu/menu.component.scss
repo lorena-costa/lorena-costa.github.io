@@ -1,5 +1,37 @@
 @import "src/variables.scss";
 
+@keyframes close-animation {
+    from {
+        width: 120px;
+        height: 180px;
+    }
+    to {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@keyframes open-animation {
+    from {
+        width: 44px;
+        height: 44px;
+    }
+    to {
+        width: 120px;
+        height: 180px;
+    }
+}
+
+.open-animation {
+    animation-name: open-animation;
+    animation-duration: 0.5s;
+}
+
+.close-animation {
+    animation-name: close-animation;
+    animation-duration: 0.5s;
+}
+
 .menu {
     position: fixed;
     top: 8px;
@@ -27,6 +59,7 @@
     .actions {
         width: 100%;
         display: block;
+        margin-bottom: 6px;
         p {
             font-family: 'RobotoLight';
             margin: 0;
@@ -65,5 +98,5 @@
 .opened {
     height: 18px;
     align-self: flex-end;
-    margin-right: 16px;
+    margin: 10px 16px auto 0;
 }
