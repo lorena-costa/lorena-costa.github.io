@@ -1,9 +1,12 @@
 @import "src/variables.scss";
 
+$open-menu-height: 220px;
+$open-menu-width: 160px;
+
 @keyframes close-animation {
     from {
-        width: 120px;
-        height: 180px;
+        width: $open-menu-width;
+        height: $open-menu-height;
     }
     to {
         width: 44px;
@@ -17,8 +20,8 @@
         height: 44px;
     }
     to {
-        width: 120px;
-        height: 180px;
+        width: $open-menu-width;
+        height: $open-menu-height;
     }
 }
 
@@ -53,8 +56,8 @@
 }
 
 .menu.isOpen {
-    height: 180px;
-    width: 120px;
+    height: $open-menu-height;
+    width: $open-menu-width;
     align-items: flex-start;
     .actions {
         width: 100%;
@@ -63,8 +66,8 @@
         p {
             font-family: 'RobotoLight';
             margin: 0;
-            padding: 4px 0 4px 8px;
-            font-size: 1.2rem;
+            padding: 8px 0 8px 8px;
+            font-size: 1.3rem;
             width: calc(100% - 8px);
             cursor: pointer;
         }
@@ -72,8 +75,8 @@
             background-color: darken($bg,3%);
         }
         p:last-of-type {
-            border-bottom-left-radius: 12px;
-            border-bottom-right-radius: 12px;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
         }
         .line {
             width: 80px;
