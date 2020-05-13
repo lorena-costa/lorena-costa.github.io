@@ -1,6 +1,6 @@
 @import "src/variables.scss";
 
-$open-menu-height: 220px;
+$open-menu-height: 228px;
 $open-menu-width: 160px;
 
 @keyframes close-animation {
@@ -101,7 +101,7 @@ $open-menu-width: 160px;
 .opened {
     height: 18px;
     align-self: flex-end;
-    margin: 8px 16px auto 0;
+    margin: 13px 16px auto 0;
 }
 
 @media screen and (min-width: 700px) {
