@@ -11,6 +11,7 @@ export class MenuComponent implements OnInit {
   isOpen: boolean = false;
   currentLanguage: string;
   languages: any;
+  timeout: any;
   constructor(private translate: TranslateService) { }
   
   ngOnInit(): void {
@@ -25,16 +26,19 @@ export class MenuComponent implements OnInit {
     this.isOpen = true;
     document.getElementById('menu').classList.remove('close-animation')
     document.getElementById('menu').classList.add('open-animation')
-    setTimeout(() => {
+    this.timeout = setTimeout(() => {
       document.getElementById('menu').classList.add('isOpen')
-    }, 500)
+      this.timeout = null
+    }, 400)
   }
 
   close() {
-    this.isOpen = false;
-    document.getElementById('menu').classList.remove('isOpen')
-    document.getElementById('menu').classList.remove('open-animation')
-    document.getElementById('menu').classList.add('close-animation')
+    if(this.timeout == null) {
+      this.isOpen = false;
+      document.getElementById('menu').classList.remove('isOpen')
+      document.getElementById('menu').classList.remove('open-animation')
+      document.getElementById('menu').classList.add('close-animation')
+    }
   }
 
   scrollTo(idSection: string) {

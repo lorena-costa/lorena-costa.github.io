@@ -2,6 +2,7 @@
 
 $open-menu-height: 228px;
 $open-menu-width: 160px;
+$animation-time: 0.4s;
 
 @keyframes close-animation {
     from {
@@ -27,12 +28,12 @@ $open-menu-width: 160px;
 
 .open-animation {
     animation-name: open-animation;
-    animation-duration: 0.5s;
+    animation-duration: $animation-time;
 }
 
 .close-animation {
     animation-name: close-animation;
-    animation-duration: 0.5s;
+    animation-duration: $animation-time;
 }
 
 .menu {
