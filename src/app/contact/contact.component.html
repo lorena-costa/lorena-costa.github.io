@@ -1,13 +1,11 @@
+<h1>{{'Contact Me' | translate}}</h1>
 <div class="contact">
-    <div class="image">
-        <span>{{'Get in touch' | translate}}</span>
-    </div>
     <form [formGroup]="form" class="shadow">
         <div class="detail shadow">
             <img src="assets/icons/send.svg">
         </div>
         <div class="form">
-            <h3>{{'Contact Me' | translate}}</h3>
+            <h3>{{'Send Message' | translate}}</h3>
             <div class="form-input">
                 <span [ngClass]="{invalid: invalidName}">{{'Name' | translate}}:</span>
                 <input type="text" formControlName="name">
@@ -20,8 +18,10 @@
                 <span [ngClass]="{invalid: invalidMessage}">{{'Message' | translate}}:</span>
                 <textarea formControlName="message"></textarea>
             </div>
-            <button (click)="send()">{{'SEND MESSAGE' | translate}}</button>
+            <button (click)="send()">{{'SEND' | translate}}</button>
         </div>
+    </form>
+    <div class="image shadow">
         <div class="social-media">
             <div class="shadow" (click)="email()">
                 <img class="email" src="assets/icons/email.svg">
@@ -33,5 +33,9 @@
                 <img class="wpp" src="assets/icons/whatsapp.svg">
             </div>
         </div>
-    </form>
+        <div>
+            <span>{{'IN_TOUCH' | translate}}</span>
+            <p>{{'LOVE_TALK' | translate}}</p>
+        </div>
+    </div>
 </div>

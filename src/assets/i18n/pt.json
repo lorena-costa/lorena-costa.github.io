@@ -1,8 +1,9 @@
 {
-    "TITLE": "Lorena Costa | Desenvolvedora de Software",
+    "TITLE": "Lorena Costa | Desenvolvedora de Software Freelancer",
     "Contact Me": "Contato",
-    "Get in touch": "Fale Conosco",
-    "SEND MESSAGE": "ENVIAR MENSAGEM",
+    "IN_TOUCH": "Quer falar comigo?",
+    "SEND": "ENVIAR",
+    "Send Message": "Enviar Mensagem",
     "Name": "Nome",
     "Message": "Mensagem",
     "Message sent!": "Mensagem enviada!",
@@ -12,5 +13,6 @@
     "Whatsapp Number copied!": "Número de Whatsapp copiado!",
     "Home": "Perfil",
     "About Me": "Sobre",
-    "Skills": "Aptidões"
+    "Skills": "Aptidões",
+    "LOVE_TALK": "Adoraria conversar sobre algum projeto ou sanar quaisquer dúvidas"
 }

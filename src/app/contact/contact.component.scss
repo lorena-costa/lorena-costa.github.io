@@ -2,11 +2,11 @@
 
 .contact {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: $bg;
-    height: 100vh;
+    margin-bottom: 50px;
 }
 
 form {
@@ -15,13 +15,14 @@ form {
     padding: 20px;
     background-color: white;
     width: calc(100% - 80px);
-    height: calc(100% - 160px);
-    border-radius: 3px;
+    min-height: 460px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .form {
     margin-top: -25px;
-    height: 90%;
+    height: 420px;
     display: flex;
     flex-direction: column; 
     justify-content: space-around;
@@ -57,15 +58,32 @@ textarea {
 }
 
 .image {
-    display: none;   
+    background-image: url("../../assets/images/contact-desktop.png");
+    background-size:  cover;
+    background-repeat: no-repeat;
+    background-position: 75% 50%;
+    width: calc(100% - 80px);
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    padding: 20px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    span {
+        font-family: 'RobotoLight';
+        font-size: 2.2rem;
+    }
 }
 
 .social-media {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
-    height: 70px;
+    align-items: center;
+    height: 80px;
     div {
         display: flex;
         align-items: center;
@@ -98,26 +116,17 @@ textarea {
 // Desktop
 $form-width: 360px;
 @media screen and (min-width: 700px) {
+    .contact {
+        flex-direction: row;
+    }
     .image {
-        background-image: url("../../assets/images/contact-desktop.png");
-        background-size:  cover;
-        background-repeat: no-repeat;
-        background-position: 75% 50%;
-        display: block;
+        order: 1;
         width: calc(100% - #{$form-width} - 60px);
-        height: calc(100% - 120px);
-        display: flex;
-        align-items: flex-end;
         border-bottom-left-radius: 3px;
         border-top-left-radius: 3px;
-        span {
-            font-family: 'RobotoLight';
-            color: white;
-            margin: 50px;
-            font-size: 2.2rem;
-        }
     }
     form {
+        order: 2;
         width: $form-width;
         max-width: $form-width;
         border-bottom-left-radius: 0;
@@ -128,14 +137,5 @@ $form-width: 360px;
 @media screen and (min-width: 1000px) {
     .image {
         width: calc(100% - #{$form-width} - 340px);
-    }
-}
-
-@media screen and (max-width: 550px) {
-    form {
-        height: calc(100% - 120px);
-    }
-    .image {
-        height: calc(100% - 80px);   
     }
 }

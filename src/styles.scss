@@ -37,12 +37,22 @@ button:focus {
     outline: none;
 }
 
+h1,h2,h3 {
+    font-family: 'RobotoLight';
+    font-weight: normal;
+}
+span, p {
+    font-family: 'Roboto';
+}
+
+h1 {
+    text-align: center;
+}
+
 h3 {
     color: $dark-gray;
     font-size: 2rem;
-    font-family: 'RobotoLight';
     margin-bottom: 0;
-    font-weight: normal;
 }
 
 .full-height {

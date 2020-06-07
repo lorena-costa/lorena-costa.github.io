@@ -1,8 +1,9 @@
 {
-    "TITLE": "Lorena Costa | Software Developer",
+    "TITLE": "Lorena Costa | Freelancer Software Developer",
     "Contact Me": "Contact Me",
-    "Keep in touch": "Keep in touch",
-    "SEND MESSAGE": "SEND MESSAGE",
+    "IN_TOUCH": "Want to get in touch?",
+    "SEND": "SUBMIT",
+    "Send Message": "Send Message",
     "Name": "Name",
     "Message": "Message",
     "Message sent!": "Message sent!",
@@ -12,5 +13,6 @@
     "Whatsapp Number copied!": "Whatsapp Number copied!",
     "Home": "Home",
     "About Me": "About Me",
-    "Skills": "Skills"
+    "Skills": "Skills",
+    "LOVE_TALK": "Would love to talk about a project or answer your questions"
 }
