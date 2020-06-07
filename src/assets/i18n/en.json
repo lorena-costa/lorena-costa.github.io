@@ -14,5 +14,11 @@
     "Home": "Home",
     "About Me": "About Me",
     "Skills": "Skills",
-    "LOVE_TALK": "Would love to talk about a project or answer your questions"
+    "LOVE_TALK": "Would love to talk about a project or answer your questions",
+    "ROBOTICS": "Robotics",
+    "FRONTEND": "",
+    "BACKEND": "",
+    "ROBOTICS_TEXT": "",
+    "ELECTRONICS":"Eletrônica",
+    "AUTOMATION": "Automação"
 }

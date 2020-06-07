@@ -1,0 +1,27 @@
+.skills {
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.skill {
+    width: 300px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+li {
+    text-align: left;
+}
+
+@media screen and (min-width: 900px) {
+    .skills {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .skill {
+        width: 22%;
+    }
+}

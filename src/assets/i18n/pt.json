@@ -13,6 +13,12 @@
     "Whatsapp Number copied!": "Número de Whatsapp copiado!",
     "Home": "Perfil",
     "About Me": "Sobre",
-    "Skills": "Aptidões",
-    "LOVE_TALK": "Adoraria conversar sobre algum projeto ou sanar quaisquer dúvidas"
+    "Skills": "Habilidades",
+    "LOVE_TALK": "Adoraria conversar sobre algum projeto ou sanar quaisquer dúvidas",
+    "ROBOTICS": "Robótica",
+    "FRONTEND": "Experiência em desenvolvimento de interfaces intuitivas com HTML5, CSS3 e JavaScript.\n\nAlém da prática com frameworks conhecidas:",
+    "BACKEND": "Criação de servidores para aplicações Web, seguindo práticas atuais de segurança e eficiência.\n\nExperência com as ferramentas:",
+    "ROBOTICS_TEXT": "Desenvolvimento de projetos de robótica capazes de executar tarefas de forma completamente autonôma.\n\nFormação em Engenharia Mecatrônica com experiência em:",
+    "ELECTRONICS":"Eletrônica",
+    "AUTOMATION": "Automação"
 }
