@@ -1,10 +1,8 @@
-@import 'src/variables.scss';
-
 .about {
     height: 100vh;
     padding: 40px;
     p {
-        color: $darker-gray;
+        color: var(--darki-font);
         font-family: 'Roboto';
         text-align: center;
     }

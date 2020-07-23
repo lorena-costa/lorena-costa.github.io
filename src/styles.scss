@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'variables.scss';
 @import "~angular-notifier/styles";
 
 @font-face {
@@ -21,13 +20,24 @@
     font-family: 'RobotoBold';
     src: url(assets/fonts/Roboto-Bold.ttf) format("truetype");;
 }
+:root {
+    --main: #2a7824;
+    --light-green: #aaeba4;
+    --bg: #f0f0f0;
+    --light-gray: #b6b5b5;
+    --dark-font: #464545;
+    --aux-font: #1f1f1f;
+    --menu: #0A2718;
+    --menu-hover: #0f2c1d;
+}
+
 
 body, html {
     padding: 0;
     margin: 0;
     font-size: 14px;
     height: 100%;
-    background-color: $bg;
+    background-color: var(--bg);
 }
 
 input:focus,
@@ -48,14 +58,14 @@ span, p {
 h1 {
     text-align: center;
     font-size: 3.2rem;
-    color: $darker-gray;
+    color: var(--dark-font);
     margin-top: 20px;
     margin-bottom: 40px;
 }
 
 h3 {
-    color: $dark-gray;
-    font-size: 2rem;
+    color: var(--dark-font);
+    font-size: 2.4rem;
     margin-bottom: 0;
 }
 
@@ -66,15 +76,15 @@ h3 {
 input, textarea {
     background-color: white;
     padding: 10px 2px;
-    border: 1px solid $light-gray;
+    border: 1px solid var(--light-gray);
     border-radius: 3px;
-    color: $darker-gray;
+    color: var(--dark-font);
     font-size: 1rem;
     font-family: 'Roboto';
 }
 input.ng-touched.ng-invalid, textarea.ng-touched.ng-invalid {
-    border: 1px solid $error;  
-    color: $error;
+    border: 1px solid var(--error);  
+    color: var(--error);
 }
 
 textarea {
@@ -82,7 +92,7 @@ textarea {
 }
 
 button {
-    background-color: $main;
+    background-color: var(--main);
     padding: 10px;
     border: 0;
     border-radius: 3px;
@@ -93,7 +103,7 @@ button {
     cursor: pointer;
 }
 button:hover {
-    background-color: darken($main,3%);
+    background-color: #266e21;
 }
 .form-input {
     display: flex;
@@ -101,10 +111,10 @@ button:hover {
     span {
         font-family: 'Roboto';
         font-size: 1rem;
-        color: $darker-gray;
+        color: var(--dark-font);
     }
     span.invalid {
-        color: $error;
+        color: var(--error);
     }
 }
 

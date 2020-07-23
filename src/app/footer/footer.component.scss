@@ -1,5 +1,3 @@
-@import "src/variables.scss";
-
 .footer {
     height: 100px;
     display: flex;
@@ -15,6 +13,6 @@
     span {
         line-height: 22px;
         font-family: 'Roboto';
-        color: $darker-gray;
+        color: var(--dark-font);
     }
 }

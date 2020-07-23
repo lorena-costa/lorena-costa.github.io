@@ -1,5 +1,3 @@
-@import "src/variables.scss";
-
 $open-menu-height: 228px;
 $open-menu-width: 160px;
 $animation-time: 0.4s;
@@ -40,7 +38,7 @@ $animation-time: 0.4s;
     position: fixed;
     top: 8px;
     right: 8px;
-    background-color: $bg;
+    background-color: var(--menu);
     height: 44px;
     width: 44px;
     border-radius: 22px;
@@ -71,27 +69,22 @@ $animation-time: 0.4s;
             font-size: 1.3rem;
             width: calc(100% - 8px);
             cursor: pointer;
+            color: var(--bg);
         }
         p:hover {
-            background-color: darken($bg,3%);
+            background-color: var(--menu-hover);
         }
         p:last-of-type {
             border-bottom-left-radius: 16px;
             border-bottom-right-radius: 16px;
         }
-        .line {
-            width: 80px;
-            height: 1px;
-            border-top: 1px solid #d1d0d0;
-            margin-left: 8px;
-        }
     }    
 }
 .menu:hover {
-    background-color: darken($bg, 3%);
+    background-color: var(--menu-hover);
 }
 .menu.isOpen:hover {
-    background-color: $bg;
+    background-color: var(--menu);
 }
 
 .closed {

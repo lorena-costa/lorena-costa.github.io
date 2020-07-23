@@ -1,11 +1,9 @@
-@import 'src/variables.scss';
-
 .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: $bg;
+    background-color: var(--bg);
     margin-bottom: 50px;
 }
 
@@ -34,8 +32,8 @@ form {
 
 .detail {
     position: relative;
-    background: $main;
-    background: linear-gradient(145deg, $main 0%, #32b128 100%);
+    background: var(--main);
+    background: linear-gradient(145deg, var(--main) 0%, #32b128 100%);
     min-height: 50px;
     min-width: 50px;
     max-width: 50px;

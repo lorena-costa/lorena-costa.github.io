@@ -12,7 +12,7 @@
    width="384pt"
    version="1.1"
    id="svg68"
-   sodipodi:docname="menu.svg"
+   sodipodi:docname="menu2.svg"
    inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <metadata
      id="metadata74">
@@ -22,6 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -41,7 +42,7 @@
      id="namedview70"
      showgrid="false"
      inkscape:zoom="1.0390625"
-     inkscape:cx="256"
+     inkscape:cx="104.90226"
      inkscape:cy="256"
      inkscape:window-x="57"
      inkscape:window-y="27"
@@ -50,13 +51,13 @@
   <path
      d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
      id="path62"
-     style="fill:#464545;fill-opacity:1" />
+     style="fill:#f0f0f0;fill-opacity:1" />
   <path
      d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
      id="path64"
-     style="fill:#464545;fill-opacity:1" />
+     style="fill:#f0f0f0;fill-opacity:1" />
   <path
      d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"
      id="path66"
-     style="fill:#464545;fill-opacity:1" />
+     style="fill:#f0f0f0;fill-opacity:1" />
 </svg>
