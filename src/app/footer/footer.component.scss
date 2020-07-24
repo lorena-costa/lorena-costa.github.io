@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: flex-end;
     padding-right: 20px;
-    background-color: white;
+    background-color: var(--menu-hover);
     img {
         height: 22px;
         margin-left: 12px;
@@ -13,6 +13,6 @@
     span {
         line-height: 22px;
         font-family: 'Roboto';
-        color: var(--dark-font);
+        color: var(--bg);
     }
 }

@@ -22,13 +22,13 @@
 }
 :root {
     --main: #2a7824;
-    --light-green: #aaeba4;
+    --light-green: #d5ffd1;
     --bg: #f0f0f0;
     --light-gray: #b6b5b5;
     --dark-font: #464545;
     --aux-font: #1f1f1f;
-    --menu: #0A2718;
-    --menu-hover: #0f2c1d;
+    --menu: #131313;
+    --menu-hover: #292929;
 }
 
 
@@ -122,4 +122,10 @@ button:hover {
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+}
+
+hr {
+    width: 80%;
+    border-top: 1px solid #2a78242c;
+    margin: 36px auto;
 }

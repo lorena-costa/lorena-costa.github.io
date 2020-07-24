@@ -78,6 +78,12 @@ $animation-time: 0.4s;
             border-bottom-left-radius: 16px;
             border-bottom-right-radius: 16px;
         }
+        hr {
+            width: calc(100% - 16px);
+            margin: 0 auto;
+            border: 0;
+            border-top: 1px solid #f0f0f075;
+        }
     }    
 }
 .menu:hover {
