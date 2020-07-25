@@ -12,11 +12,11 @@
 }
 
 .image {
-    background-image: url("../../assets/images/desktop.png");
+    background-image: url("../../assets/images/mobile.png");
     background-size: contain;
     background-repeat: no-repeat;
-    height: 240px;
-    justify-self: flex-end;
+    height: 180px;
+    margin-left: 34px;
 }
 
 @media screen and (min-width: 700px) { 

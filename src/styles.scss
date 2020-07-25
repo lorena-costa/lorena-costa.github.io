@@ -29,6 +29,7 @@
     --aux-font: #1f1f1f;
     --menu: #131313;
     --menu-hover: #292929;
+    --error: rgb(194, 77, 77);
 }
 
 
@@ -75,7 +76,7 @@ h3 {
 
 input, textarea {
     background-color: white;
-    padding: 10px 2px;
+    padding: 6px 2px;
     border: 1px solid var(--light-gray);
     border-radius: 3px;
     color: var(--dark-font);
